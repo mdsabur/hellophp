@@ -10,7 +10,17 @@ class App extends Component {
       name: 'Md Abdus Sabur'
     };
   }
-  
+  componentDidMount() {
+  this.getUsers();
+}
+
+  getUsers() {
+  axios
+    .get("http://schoolbook.bizworldbd.com/hello.php")
+    .then(response => console.log(response))
+    .catch(error => this.setState({ error, isLoading: false }));
+}
+
   render() {
     return (
       <div>
