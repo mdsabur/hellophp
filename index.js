@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import axios from 'axios';
+
 import Hello from './Hello';
 import './style.css';
 
